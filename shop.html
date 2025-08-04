@@ -1,0 +1,908 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PetalVibe | Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+     body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+    }
+    .flower-img {
+      width: 100%;
+      height: 550px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+    .card {
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .btn-view, .btn-add {
+      margin-top: 10px;
+      background-color: #cc3366;
+      color: white;
+      font-size: 0.9rem;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container my-5">
+    <h1 class="text-center text-danger mb-4">Explore Our Blooms</h1>
+    <div class="row" id="product-list">
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f1.jpg" id="img1" class="flower-img card-img-top" alt="Red Rose">
+          <div class="card-body text-center">
+            <h5 class="card-title">Red Rose</h5>
+            <p>$3.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal1">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Red Rose', 3, document.getElementById('img1').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal1" tabindex="-1" aria-labelledby="flowerModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel1">Red Rose Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f1.jpg" class="img-fluid mb-3" alt="Red Rose">
+              <p>Classic symbol of love and romance. Ideal for Valentine’s or anniversaries.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f2.jpg" id="img2" class="flower-img card-img-top" alt="Yellow Tulip">
+          <div class="card-body text-center">
+            <h5 class="card-title">Yellow Tulip</h5>
+            <p class="card-text">$6.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal2">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Yellow Tulip', 6, document.getElementById('img2').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal2" tabindex="-1" aria-labelledby="flowerModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel2">Yellow Tulip Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f2.jpg" class="img-fluid mb-3" alt="Yellow Tulip">
+              <p>Cheerful and bright tulip. Perfect to lift someone’s mood.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f3.jpg" id="img3" class="flower-img card-img-top" alt="White Lily">
+          <div class="card-body text-center">
+            <h5 class="card-title">White Lily</h5>
+            <p class="card-text">$9.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal3">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('White Lily', 9, document.getElementById('img3').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal3" tabindex="-1" aria-labelledby="flowerModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel3">White Lily Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f3.jpg" class="img-fluid mb-3" alt="White Lily">
+              <p>This is an elegant and vibrant flower perfect for any occasion. Add beauty and fragrance to your space with White Lily.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f4.jpg" id="img4" class="flower-img card-img-top" alt="Pink Daisy">
+          <div class="card-body text-center">
+            <h5 class="card-title">Pink Daisy</h5>
+            <p class="card-text">$12.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal4">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Pink Daisy', 12, document.getElementById('img4').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal4" tabindex="-1" aria-labelledby="flowerModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel4">Pink Daisy Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f4.jpg" class="img-fluid mb-3" alt="Pink Daisy">
+              <p>Soft and gentle bloom, perfect for new beginnings and friendships.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f5.jpg" id="img5" class="flower-img card-img-top" alt="Purple Orchid">
+          <div class="card-body text-center">
+            <h5 class="card-title">Purple Orchid</h5>
+            <p class="card-text">$15.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal5">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Purple Orchid', 15, document.getElementById('img5').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal5" tabindex="-1" aria-labelledby="flowerModalLabel5" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel5">Purple Orchid Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f5.jpg" class="img-fluid mb-3" alt="Purple Orchid">
+              <p>Exotic and graceful. Makes a statement in any bouquet.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f6.jpg" id="img6" class="flower-img card-img-top" alt="Sunflower">
+          <div class="card-body text-center">
+            <h5 class="card-title">Sunflower</h5>
+            <p class="card-text">$18.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal6">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Sunflower', 18, document.getElementById('img6').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal6" tabindex="-1" aria-labelledby="flowerModalLabel6" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel6">Sunflower Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f6.jpg" class="img-fluid mb-3" alt="Sunflower">
+              <p>Bright and bold. Represents happiness and positivity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f7.jpg" id="img7" class="flower-img card-img-top" alt="Blue Hydrangea">
+          <div class="card-body text-center">
+            <h5 class="card-title">Blue Hydrangea</h5>
+            <p class="card-text">$21.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal7">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Blue Hydrangea', 21, document.getElementById('img7').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal7" tabindex="-1" aria-labelledby="flowerModalLabel7" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel7">Blue Hydrangea Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f7.jpg" class="img-fluid mb-3" alt="Blue Hydrangea">
+              <p>Soft blue petals. Ideal for thank-you or home decoration.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f8.jpg" id="img8" class="flower-img card-img-top" alt="Orange Marigold">
+          <div class="card-body text-center">
+            <h5 class="card-title">Orange Marigold</h5>
+            <p class="card-text">$24.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal8">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Orange Marigold', 24, document.getElementById('img8').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal8" tabindex="-1" aria-labelledby="flowerModalLabel8" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel8">Orange Marigold Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f8.jpg" class="img-fluid mb-3" alt="Orange Marigold">
+              <p>Traditional, vibrant flower. Symbolizes warmth and passion.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f9.jpg" id="img9" class="flower-img card-img-top" alt="Lavender Sprigs">
+          <div class="card-body text-center">
+            <h5 class="card-title">Lavender Sprigs</h5>
+            <p class="card-text">$27.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal9">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Lavender Sprigs', 27, document.getElementById('img9').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal9" tabindex="-1" aria-labelledby="flowerModalLabel9" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel9">Lavender Sprigs Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f9.jpg" class="img-fluid mb-3" alt="Lavender Sprigs">
+              <p>Fragrant and calming. Great for relaxation and natural beauty.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f10.jpg" id="img10" class="flower-img card-img-top" alt="Mixed Wildflowers">
+          <div class="card-body text-center">
+            <h5 class="card-title">Mixed Wildflowers</h5>
+            <p class="card-text">$30.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal10">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Mixed Wildflowers', 30, document.getElementById('img10').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal10" tabindex="-1" aria-labelledby="flowerModalLabel10" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel10">Mixed Wildflowers Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f10.jpg" class="img-fluid mb-3" alt="Mixed Wildflowers">
+              <p>A colorful bundle of natural charm. Ideal for rustic celebrations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f11.avif" id="img11" class="flower-img card-img-top" alt="Hibiscus">
+          <div class="card-body text-center">
+            <h5 class="card-title">Hibiscus</h5>
+            <p class="card-text">$33.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal11">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Hibiscus', 33, document.getElementById('img11').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal11" tabindex="-1" aria-labelledby="flowerModalLabel11" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel11">Hibiscus Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f11.avif" class="img-fluid mb-3" alt="Hibiscus">
+              <p>Tropical flower. Symbol of beauty, charm, and delicate femininity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f12.jpg" id="img12" class="flower-img card-img-top" alt="Snapdragon">
+          <div class="card-body text-center">
+            <h5 class="card-title">Snapdragon</h5>
+            <p class="card-text">$36.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal12">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Snapdragon', 36, document.getElementById('img12').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal12" tabindex="-1" aria-labelledby="flowerModalLabel12" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel12">Snapdragon Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f12.jpg" class="img-fluid mb-3" alt="Snapdragon">
+              <p>Unique shape like a dragon’s mouth. Symbolizes grace and strength.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f13.jpg" id="img13" class="flower-img card-img-top" alt="Zinnia">
+          <div class="card-body text-center">
+            <h5 class="card-title">Zinnia</h5>
+            <p class="card-text">$39.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal13">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Zinnia', 39, document.getElementById('img13').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal13" tabindex="-1" aria-labelledby="flowerModalLabel13" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel13">Zinnia Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f13.jpg" class="img-fluid mb-3" alt="Zinnia">
+              <p>Vibrant and long-lasting. Represents friendship and endurance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f14.jpg" id="img14" class="flower-img card-img-top" alt=" Anemone">
+          <div class="card-body text-center">
+            <h5 class="card-title"> Anemone</h5>
+            <p class="card-text">$42.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal14">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart(' Anemone', 42, document.getElementById('img14').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal14" tabindex="-1" aria-labelledby="flowerModalLabel14" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel14"> Anemone Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f14.jpg" class="img-fluid mb-3" alt=" Anemone">
+              <p>Delicate petals. Symbol of protection against evil and misfortune.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f15.jpg" id="img15" class="flower-img card-img-top" alt="Camellia">
+          <div class="card-body text-center">
+            <h5 class="card-title">Camellia</h5>
+            <p class="card-text">$45.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal15">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Camellia', 45, document.getElementById('img15').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal15" tabindex="-1" aria-labelledby="flowerModalLabel15" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel15">Camellia Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f15.jpg" class="img-fluid mb-3" alt="Camellia">
+              <p>Popular in East Asia. Symbolizes love, admiration, and refinement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f16.jpg" id="img16" class="flower-img card-img-top" alt=" Bluebell">
+          <div class="card-body text-center">
+            <h5 class="card-title"> Bluebell</h5>
+            <p class="card-text">$48.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal16">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart(' Bluebell', 48, document.getElementById('img16').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal16" tabindex="-1" aria-labelledby="flowerModalLabel16" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel16"> Bluebell Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f16.jpg" class="img-fluid mb-3" alt=" Bluebell">
+              <p>Delicate blue flowers. Symbol of humility and gratitude.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f17.jpg" id="img17" class="flower-img card-img-top" alt="Poppy">
+          <div class="card-body text-center">
+            <h5 class="card-title">Poppy</h5>
+            <p class="card-text">$51.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal17">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Poppy', 51, document.getElementById('img17').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal17" tabindex="-1" aria-labelledby="flowerModalLabel17" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel17">Poppy Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f17.jpg" class="img-fluid mb-3" alt="Poppy">
+              <p>Known for its striking red color. Represents remembrance, especially for fallen soldiers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f18.jpg" id="img18" class="flower-img card-img-top" alt="Iris">
+          <div class="card-body text-center">
+            <h5 class="card-title">Iris</h5>
+            <p class="card-text">$54.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal18">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Iris', 54, document.getElementById('img18').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal18" tabindex="-1" aria-labelledby="flowerModalLabel18" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel18">Iris Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f18.jpg" class="img-fluid mb-3" alt="Iris">
+              <p>Named after the Greek goddess. Symbol of hope, faith, and wisdom.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f19.jpg" id="img19" class="flower-img card-img-top" alt="Carnation">
+          <div class="card-body text-center">
+            <h5 class="card-title">Carnation</h5>
+            <p class="card-text">$57.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal19">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Carnation', 57, document.getElementById('img19').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal19" tabindex="-1" aria-labelledby="flowerModalLabel19" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel19">Carnation Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f19.jpg" class="img-fluid mb-3" alt="Carnation">
+              <p>Symbol of admiration and gratitude. Often used on Mother’s Day.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f20.jpg" id="img20" class="flower-img card-img-top" alt="Chrysanthemum">
+          <div class="card-body text-center">
+            <h5 class="card-title">Chrysanthemum</h5>
+            <p class="card-text">$60.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal20">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Chrysanthemum', 60, document.getElementById('img20').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal20" tabindex="-1" aria-labelledby="flowerModalLabel20" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel20">Chrysanthemum Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f20.jpg" class="img-fluid mb-3" alt="Chrysanthemum">
+              <p>Represents joy and longevity in many cultures, especially in Asia.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f21.jpg" id="img21" class="flower-img card-img-top" alt="Peony">
+          <div class="card-body text-center">
+            <h5 class="card-title">Peony</h5>
+            <p class="card-text">$63.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal21">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Peony', 63, document.getElementById('img21').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal21" tabindex="-1" aria-labelledby="flowerModalLabel21" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel21">Peony Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f21.jpg" class="img-fluid mb-3" alt="Peony">
+              <p> Lush and full. Symbol of prosperity, good fortune, and romance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f22.jpg" id="img22" class="flower-img card-img-top" alt="Gardenia">
+          <div class="card-body text-center">
+            <h5 class="card-title">Gardenia</h5>
+            <p class="card-text">$66.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal22">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Gardenia', 66, document.getElementById('img22').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal22" tabindex="-1" aria-labelledby="flowerModalLabel22" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel22">Gardenia Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f22.jpg" class="img-fluid mb-3" alt="Gardenia">
+              <p>Known for its creamy white petals and strong fragrance. Symbolizes purity and secret love.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f23.jpg" id="img23" class="flower-img card-img-top" alt="Freesia">
+          <div class="card-body text-center">
+            <h5 class="card-title">Freesia</h5>
+            <p class="card-text">$69.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal23">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Freesia', 69, document.getElementById('img23').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal23" tabindex="-1" aria-labelledby="flowerModalLabel23" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel23">Freesia Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f23.jpg" class="img-fluid mb-3" alt="Freesia">
+              <p>A sweet-smelling flower. Represents innocence, trust, and friendship.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f24.jpg" id="img24" class="flower-img card-img-top" alt="Ranunculus">
+          <div class="card-body text-center">
+            <h5 class="card-title">Ranunculus</h5>
+            <p class="card-text">$72.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal24">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Ranunculus', 72, document.getElementById('img24').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal24" tabindex="-1" aria-labelledby="flowerModalLabel24" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel24">Ranunculus Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f24.jpg" class="img-fluid mb-3" alt="Ranunculus">
+              <p>Rose-like blooms. Symbol of charm and attractiveness.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f25.jpg" id="img25" class="flower-img card-img-top" alt="Sweet Pea">
+          <div class="card-body text-center">
+            <h5 class="card-title">Sweet Pea</h5>
+            <p class="card-text">$75.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal25">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Sweet Pea', 75, document.getElementById('img25').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal25" tabindex="-1" aria-labelledby="flowerModalLabel25" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel25">Sweet Pea Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f25.jpg" class="img-fluid mb-3" alt="Sweet Pea">
+              <p>Fragrant and delicate. Often used to say “thank you” or “goodbye.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f26.jpg" id="img26" class="flower-img card-img-top" alt=" Alstroemeria (Peruvian Lily)">
+          <div class="card-body text-center">
+            <h5 class="card-title"> Alstroemeria (Peruvian Lily)</h5>
+            <p class="card-text">$78.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal26">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart(' Alstroemeria (Peruvian Lily)', 78, document.getElementById('img26').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal26" tabindex="-1" aria-labelledby="flowerModalLabel26" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel26"> Alstroemeria (Peruvian Lily) Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f26.jpg" class="img-fluid mb-3" alt=" Alstroemeria (Peruvian Lily)">
+              <p>Symbolizes friendship, devotion, and mutual support.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f27.jpg" id="img27" class="flower-img card-img-top" alt="Bird of Paradise">
+          <div class="card-body text-center">
+            <h5 class="card-title">Bird of Paradise</h5>
+            <p class="card-text">$81.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal27">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Bird of Paradise', 81, document.getElementById('img27').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal27" tabindex="-1" aria-labelledby="flowerModalLabel27" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel27">Bird of Paradise Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f27.jpg" class="img-fluid mb-3" alt="Bird of Paradise">
+              <p>Exotic flower shaped like a bird. Represents freedom, paradise, and joy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f28.jpg" id="img28" class="flower-img card-img-top" alt="Cosmos">
+          <div class="card-body text-center">
+            <h5 class="card-title">Cosmos</h5>
+            <p class="card-text">$84.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal28">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Cosmos', 84, document.getElementById('img28').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal28" tabindex="-1" aria-labelledby="flowerModalLabel28" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel28">Cosmos Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f28.jpg" class="img-fluid mb-3" alt="Cosmos">
+              <p>Daisy-like blooms. Associated with harmony, order, and peace.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f29.jpg" id="img29" class="flower-img card-img-top" alt="Dahlia">
+          <div class="card-body text-center">
+            <h5 class="card-title">Dahlia</h5>
+            <p class="card-text">$87.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal29">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Dahlia', 87, document.getElementById('img29').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal29" tabindex="-1" aria-labelledby="flowerModalLabel29" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel29">Dahlia Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f29.jpg" class="img-fluid mb-3" alt="Dahlia">
+              <p>Striking, layered petals. Symbol of elegance, inner strength, and creativity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="Images/f30.jpg" id="img30" class="flower-img card-img-top" alt="Foxglove">
+          <div class="card-body text-center">
+            <h5 class="card-title">Foxglove</h5>
+            <p class="card-text">$90.00</p>
+            <button class="btn btn-outline-danger btn-view" data-bs-toggle="modal" data-bs-target="#flowerModal30">View Details</button>
+            <button class="btn btn-danger btn-add" onclick="addToCart('Foxglove', 90, document.getElementById('img30').src)">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="flowerModal30" tabindex="-1" aria-labelledby="flowerModalLabel30" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="flowerModalLabel30">Foxglove Details</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center">
+              <img src="Images/f30.jpg" class="img-fluid mb-3" alt="Foxglove">
+              <p>Bell-shaped flowers. Symbol of ambition and energy (but also toxic if ingested).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div class="text-center mt-4">
+      <a href="cart.html" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #cc3366;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  z-index: 999;
+">
+🛒 Cart
+</a>
+    </div>
+  </div>
+
+  <script>
+    function addToCart(name, price, image) {
+      const cart = JSON.parse(localStorage.getItem('cart')) || [];
+      cart.push({ name, price, image });
+      localStorage.setItem('cart', JSON.stringify(cart));
+      alert(`${name} has been added to the cart!`);
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
