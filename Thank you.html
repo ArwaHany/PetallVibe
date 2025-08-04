@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thank You | PetalVibe</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-image: url('https://i.pinimg.com/1200x/3a/64/ed/3a64ed0c833d4cf3003a22553648e9d3.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #cc3366;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      backdrop-filter: brightness(0.4);
+    }
+
+    .overlay {
+      background-color: rgba(255, 240, 245, 0.7);
+      padding: 50px;
+      border-radius: 20px;
+      margin: auto;
+      max-width: 600px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
+    .quote {
+      margin-top: 30px;
+      font-style: italic;
+      color: #ffddf4;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Thank You for Your Order!</h1>
+    <p>Your flowers are being prepared with love and care.</p>
+    <p>We’re so happy to have you as part of the PetalVibe family!</p>
+    <div class="quote" id="quote">Fetching a special quote for you...</div>
+  </div>
+
+  <script>
+    fetch('http://api.quotable.io/random')
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById("quote").innerText = `"${data.content}" — ${data.author}`;
+      })
+      .catch(error => {
+        document.getElementById("quote").innerText = "Couldn't fetch quote. Please enjoy your day!";
+        console.error(error);
+      });
+  </script>
+</body>
+</html>
+

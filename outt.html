@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checkout - PetalVibe</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+    }
+    form {
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 30px;
+      background-color: #ffe4ec;
+      border-radius: 15px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      
+    }
+    form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #c2185b;
+    }
+    input, textarea, button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #c2185b;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    button:hover {
+      background-color: #a2154f;
+    }
+    #status {
+      text-align: center;
+      margin-top: 10px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+
+  <form id="order-form">
+    <h2>Checkout</h2>
+    <input type="text" name="user_name" placeholder="Your Name" required />
+    <input type="email" name="user_email" placeholder="Your Email" required />
+    <input type="text" name="address" placeholder="Address" required />
+    <input type="tel" name="phone" placeholder="Phone Number" required />
+    <textarea name="order_details" placeholder="Order Details (e.g., 3x Roses, 2x Tulips)" optional></textarea>
+    <button type="submit">Place Order</button>
+    <p id="status"></p>
+  </form>
+
+  <!-- EmailJS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS
+    (function () {
+      emailjs.init("Qx0M0TwWhhJyaCRmh"); // ← استبدليها بمفتاحك
+    })();
+
+    // Handle Form Submission
+    document.getElementById("order-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      emailjs.sendForm("service_7innn4l", "template_palhmis", this).then(
+        function () {
+          document.getElementById("status").innerText = "Your order has been sent successfully!";
+        },
+        function (error) {
+          document.getElementById("status").innerText = "Error sending order. Please try again.";
+          console.error("EmailJS Error:", error);
+        }
+      );
+      window.location.href = "Thank you.html";
+    });
+  </script>
+
+</body>
+</html>
